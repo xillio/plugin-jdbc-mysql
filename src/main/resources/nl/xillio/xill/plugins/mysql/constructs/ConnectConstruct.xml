@@ -20,9 +20,9 @@ Specification](https://dev.mysql.com/doc/connector-j/en/connector-j-usagenotes-c
         <example title="Usage">
             <header>Connect to a database using credentials</header>
             <code>
-                use MySQL;
+                use MySQL as db;
 
-                MySQL.connect(
+                db.connect(
                     "jdbc:mysql://localhost/my-database" ::
                     "?user=root" ::
                     "&amp;password=super1secret"

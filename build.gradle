@@ -14,9 +14,17 @@ apply plugin: 'nl.xillio.gradle-config'
 
 dependencies {
     compile 'mysql:mysql-connector-java:5.1.38'
-	compile 'nl.xillio.xill:plugin-jdbc-core:norelease'
-	
-	testCompile 'org.testng:testng:6.9.10'
+    compile 'nl.xillio.xill:plugin-jdbc-core:1.0.0'
+
+    testCompile 'org.testng:testng:6.9.10'
     testCompile 'org.mockito:mockito-all:1.10.19'
     testCompile 'nl.xillio.xill:testutils:3.3.3'
+}
+
+tasks.withType(Jar) {
+    doFirst {
+        manifest {
+            attributes "Class-Path": project.configurations.runtime.files.collect { File file -> file.name }.join(" ")
+        }
+    }
 }
