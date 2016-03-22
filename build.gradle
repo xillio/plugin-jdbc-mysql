@@ -14,7 +14,7 @@ apply plugin: 'nl.xillio.gradle-config'
 
 dependencies {
     compile 'mysql:mysql-connector-java:5.1.38'
-    compile 'nl.xillio.xill:plugin-jdbc-core:norelease'
+    compile 'nl.xillio.xill:plugin-jdbc-core:1.0.0'
 
     testCompile 'org.testng:testng:6.9.10'
     testCompile 'org.mockito:mockito-all:1.10.19'
