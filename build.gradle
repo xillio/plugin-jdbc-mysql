@@ -28,3 +28,9 @@ tasks.withType(Jar) {
         }
     }
 }
+
+task fatJar(type: Jar, dependsOn: jar) {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+    classifier 'all'
+}
