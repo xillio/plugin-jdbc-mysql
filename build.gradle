@@ -22,7 +22,7 @@ configurations {
 
 dependencies {
     compile 'mysql:mysql-connector-java:5.1.38'
-    compile('nl.xillio.xill:plugin-jdbc-core:1.0.0-2-gc2d474c') {
+    compile('nl.xillio.xill:plugin-jdbc-core:1.0.1') {
         exclude(group: 'nl.xillio.xill', module: 'api')
     }
     api 'nl.xillio.xill:api:3.3.3'
