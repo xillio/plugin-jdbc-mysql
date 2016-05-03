@@ -11,6 +11,7 @@ hs_err_pid*
 build/
 gradle-app.setting
 !gradle-wrapper.jar
+bintray-info.json
 
 ### JetBrains template
 *.iml
