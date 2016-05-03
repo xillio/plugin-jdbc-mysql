@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'nl.xillio:gradle-config:1.4.0'
+        classpath 'nl.xillio:gradle-config:1.4.1'
     }
 }
 
