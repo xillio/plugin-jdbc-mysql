@@ -1,0 +1,22 @@
+{
+  "package": {
+    "name": "plugin-jdbc-mysql",
+    "repo": "Xill-plugins-public",
+    "subject": "xillio",
+    "desc": "JDBC Mysql Plugin for Xill",
+    "website_url": "https://www.xill.io",
+    "issue_tracker_url": "https://bitbucket.org/xillio/plugin-jdbc-mysql/issues",
+    "vcs_url": "https://bitbucket.org/xillio/plugin-jdbc-mysql",
+    "labels": ["plugin", "database", "jdbc", "mysql", "xill"],
+    "public_download_numbers": false,
+    "public_stats": false
+  },
+  "version": {
+    "name": "$VERSION$",
+    "desc": "Concurrency version: $VERSION$",
+    "attributes" : [{"name": "Build Date", "values" : ["$BUILDDATE$"], "type": "date"}],
+    "vcs_tag" : "$VERSION$",
+    "gpgSign": false
+  },
+  "publish": true
+}

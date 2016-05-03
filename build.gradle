@@ -1,3 +1,6 @@
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
+
 buildscript {
     repositories {
         maven {
@@ -48,3 +51,21 @@ tasks.withType(Jar) {
         }
     }
 }
+
+def bintrayInfoFile = file("$projectDir/bintray-info.json")
+
+//noinspection GroovyAssignabilityCheck
+task createBintrayInfoFile << {
+    bintrayInfoFile.write(
+            new File("$rootDir/gradle/bintray-info-template.json")
+                    .getText('UTF-8')
+                    .replace('$VERSION$', project.version.toString())
+                    .replace('$BUILDDATE$', ZonedDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd'T'HH:mm:ssZ")))
+    )
+}
+
+artifacts {
+    archives file: bintrayInfoFile, name: 'bintray-info', type: 'json', builtBy: createBintrayInfoFile
+}
+
+clean.delete bintrayInfoFile
