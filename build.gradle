@@ -65,6 +65,7 @@ task createBintrayInfoFile << {
 }
 
 artifacts {
+    archives distZip
     archives file: bintrayInfoFile, name: 'bintray-info', type: 'json', builtBy: createBintrayInfoFile
 }
 
