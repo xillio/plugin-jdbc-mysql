@@ -1,6 +1,10 @@
 # Xill JDBC MySQL Plugin - Change Log
 All notable changes to this project will be documented in this file
 
+##  [1.0.5] - 24-06-2016
+### Change
+- Update jdbc-core plugin version [CTC-1661]
+
 ##  [1.0.4] - 06-05-2016
 ### Fix
 - MySQL.connect fails from inside runBulk with "Unknown Internal Error" [CTC-1568] [CTC-1492]
