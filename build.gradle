@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'nl.xillio:gradle-config:1.4.0'
+        classpath 'nl.xillio:gradle-config:1.4.1'
     }
 }
 
@@ -24,11 +24,12 @@ configurations {
 }
 
 dependencies {
+    // Update version numbers in README when changing this
     compile 'mysql:mysql-connector-java:5.1.38'
-    compile('nl.xillio.xill:plugin-jdbc-core:1.0.1') {
+    compile('nl.xillio.xill:plugin-jdbc-core:1.0.3') {
         exclude(group: 'nl.xillio.xill', module: 'api')
     }
-    api 'nl.xillio.xill:api:3.3.3'
+    api 'nl.xillio.xill:api:3.3.15'
 
     testCompile 'org.testng:testng:6.9.10'
     testCompile 'org.mockito:mockito-all:1.10.19'
