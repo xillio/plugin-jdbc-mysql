@@ -26,7 +26,7 @@ configurations {
 dependencies {
     // Update version numbers in README when changing this
     compile 'mysql:mysql-connector-java:5.1.38'
-    compile('nl.xillio.xill:plugin-jdbc-core:1.0.3') {
+    compile('nl.xillio.xill:plugin-jdbc-core:1.0.4') {
         exclude(group: 'nl.xillio.xill', module: 'api')
     }
     api 'nl.xillio.xill:api:3.3.15'
